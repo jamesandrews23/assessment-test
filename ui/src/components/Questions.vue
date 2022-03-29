@@ -30,10 +30,13 @@ export default {
       return http.get('/questions');
     },
 
-    onSubmit(){
-      console.log('submit');
-      this.calculateScore();
+    submitFinalScore(){
+      return http.post('/reports', {score: this.score});
+    },
 
+    onSubmit(){
+      this.calculateScore();
+      this.submitFinalScore();
     },
 
     calculatePossiblePoints(){
@@ -95,6 +98,7 @@ export default {
     <input class="button-style" type="submit" value="Submit" />
   </form>
 </template>
+
 <style>
 input[type="radio"], input[type="checkbox"] {
   margin-right: 10px;
