@@ -27,7 +27,7 @@ cd api && npm run dev
 
 Open a browser and go to http://localhost:3000.
 
-##Production Mode
+## Production Mode
 
 To run the production ready version open a terminal, navigate to the installed project, then run
 
