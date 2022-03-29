@@ -4,7 +4,7 @@
   "description": "node server",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "dev": "nodemon ./server.js localhost 8080"
   },
   "author": "",
@@ -15,6 +15,8 @@
     "express": "^4.17.3"
   },
   "devDependencies": {
+    "@jest-mock/express": "^1.4.5",
+    "jest": "^27.5.1",
     "nodemon": "^2.0.15"
   }
 }
