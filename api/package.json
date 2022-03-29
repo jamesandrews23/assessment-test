@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "jest",
-    "dev": "nodemon ./server.js localhost 8080"
+    "dev": "nodemon ./server.js localhost 8080",
+    "start": "cd ../ui && npm run build && cd ../api && nodemon ./server-prod.js localhost 8080"
   },
   "author": "",
   "license": "ISC",
