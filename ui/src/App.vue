@@ -5,9 +5,9 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
   <header>
     <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/reports">Reports</RouterLink>
+      <nav style="text-align: center">
+        <RouterLink class="nav-button" to="/">Assessment Test</RouterLink>
+        <RouterLink class="nav-button" to="/reports">Reports</RouterLink>
       </nav>
     </div>
   </header>
@@ -24,5 +24,16 @@ import { RouterLink, RouterView } from 'vue-router'
   padding: 2rem;
 
   font-weight: normal;
+}
+
+.nav-button {
+  font-size: 1.5em;
+  text-decoration: none;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  margin: 0 10px;
+  background-color: #3185c1;
+  color: white;
 }
 </style>

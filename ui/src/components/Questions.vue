@@ -74,7 +74,7 @@ export default {
 
 <template>
   <form @submit.prevent="onSubmit">
-    <div v-show="score">Your score was {{score}}%</div>
+    <h3 class="score-banner" v-show="score">Total Score {{score}}%</h3>
       <div v-for="(elem, questIndex) in questions">
         <p class="question">{{elem.question}}</p>
         <div v-for="(answer, index) in elem.answers">
@@ -114,14 +114,30 @@ p.question {
 }
 
 .button-style {
-  padding: 5px 5px;
-  border: 1px solid #008900;
+  padding: 10px;
+  border: none;
   background-color: #04AA6D;
   color: #fff;
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
   float: right;
+  font-size: 1em;
+}
+
+form {
+  margin-top: 4em;
+}
+
+.score-banner {
+  margin: 10px 0;
+  font-weight: bold;
+  color: #005e00;
+  display: block;
+  background-color: #66db9a;
+  padding: 16px;
+  border-radius: 10px;
+  text-align: center;
 }
 </style>
 
