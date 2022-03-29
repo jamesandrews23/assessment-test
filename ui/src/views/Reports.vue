@@ -10,6 +10,7 @@ export default {
     data(){
       return {
         series: [{
+          name: 'Users',
           data: [1, 4, 1, 8, 20, 25, 8, 1, 0, 0]
         }],
         chartOptions: {
@@ -34,7 +35,13 @@ export default {
             '30% - 20%', '20% - 10%', '10% - 0%'],
             title: {
               text: 'Number of Users'
-            }
+            },
+
+          },
+          yaxis: {
+            forceNiceScale: true,
+            min: 1,
+            max: 100
           }
         },
       }
