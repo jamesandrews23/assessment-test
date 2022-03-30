@@ -11,6 +11,8 @@ exports.submitAnswers = (req, res) => {
         scores = updateScores(score);
     }
 
+    res.type('json');
+    res.status(200);
     res.send(scores);
 };
 
