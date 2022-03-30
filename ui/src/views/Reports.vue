@@ -12,7 +12,7 @@ export default {
       return {
         series: [{
           name: 'Users',
-          data: [1, 4, 1, 8, 20, 25, 8, 1, 0, 0]
+          data: []
         }],
         chartOptions: {
           chart: {
