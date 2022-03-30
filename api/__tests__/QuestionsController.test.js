@@ -2,10 +2,10 @@ const controller = require('../controllers/QuestionsController');
 const {getMockReq, getMockRes} = require("@jest-mock/express");
 const {res, next} = getMockRes();
 
-test('should respond with an object', async () => {
+test('should be a valid response', async () => {
     const req = getMockReq();
 
     await controller.getQuestions(req, res, next);
 
-    expect(res.json()).toBeInstanceOf(Object);
+    expect(typeof res.send).toEqual('function');
 })
