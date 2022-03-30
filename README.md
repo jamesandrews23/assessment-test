@@ -16,23 +16,37 @@ dependency conflicts.
 To run in development mode open a terminal and navigate to the installed project
 
 ```sh
-cd ui && npm run dev
+cd ui && npm install
 ```
 
+then
+
+```sh
+cd ../api && npm install
+```
+and finally
+
+```sh
+npm run dev
+```
 then in a separate terminal 
 
 ```shell
-cd api && npm run dev
+cd ui && npm run dev
 ```
-
 Open a browser and go to http://localhost:3000.
 
 ## Production Mode
 
 To run the production ready version open a terminal, navigate to the installed project, then run
 
+```sh
+cd ui && npm install
+```
+then
+
 ```shell
-cd api && npm run start
+cd ../api && npm install && npm start
 ```
 
 this command will first package the vue app under ui/dist and the server-prod.js will use it as the static
